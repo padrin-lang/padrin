@@ -1,6 +1,8 @@
 package token
 
+import visitor.LexerVisitor
+
 interface PElement {
-  val identifier: String
-  val debugName: String
+    val text: String
+    val debugName: String
 }

@@ -1,5 +1,0 @@
-package visitor
-
-interface KeywordVisitor {
-
-}
