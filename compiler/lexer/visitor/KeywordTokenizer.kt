@@ -2,7 +2,7 @@ package visitor
 
 import token.PToken
 
-class KeywordTokenizer : LexerVisitor {
+object KeywordTokenizer : LexerVisitor {
 
     override fun visit(symbol: String): PToken.PKeywordToken {
         TODO()
