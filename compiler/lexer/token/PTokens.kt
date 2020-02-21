@@ -8,6 +8,7 @@ enum class PTokens(val tokenType: PToken) {
     INTEGER_LITERAL(PToken.PRegularToken("INTEGER_LITERAL")),
     FLOAT_LITERAL(PToken.PRegularToken("FLOAT_LITERAL")),
     CHARACTER_LITERAL(PToken.PRegularToken("CHARACTER_LITERAL")),
+    IDENTIFIER(PToken.PRegularToken("IDENTIFIER")),
 
     PACKAGE(PToken.PKeywordToken("package")),
     INSTANCE(PToken.PKeywordToken("instance")),
@@ -29,5 +30,5 @@ enum class PTokens(val tokenType: PToken) {
     MUL(PToken.PSingleValueToken("MUL", symbol = "*")),
     PLUS(PToken.PSingleValueToken("PLUS", symbol = "+")),
     MINUS(PToken.PSingleValueToken("MINUS", symbol = "-")),
-
+    DIV(PToken.PSingleValueToken("DIV", symbol = "/"))
 }
