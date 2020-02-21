@@ -1,6 +1,6 @@
 package token
 
-enum class PTokens(val tokenType: PTokenType) {
+enum class PToken(val tokenType: PTokenType) {
 
     EOF(PTokenType.PRegularToken("EOF")),
     RESERVED(PTokenType.PRegularToken("RESERVED")),
@@ -30,5 +30,7 @@ enum class PTokens(val tokenType: PTokenType) {
     MUL(PTokenType.PSingleValueToken("MUL", symbol = "*")),
     PLUS(PTokenType.PSingleValueToken("PLUS", symbol = "+")),
     MINUS(PTokenType.PSingleValueToken("MINUS", symbol = "-")),
-    DIV(PTokenType.PSingleValueToken("DIV", symbol = "/"))
+    DIV(PTokenType.PSingleValueToken("DIV", symbol = "/")),
+
+    UNKNOWN(PTokenType.PUnknownToken)
 }
