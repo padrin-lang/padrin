@@ -1,10 +1,10 @@
 package visitor
 
-import token.PToken
+import token.PTokenType
 
 object SingleValueTokenizer : LexerVisitor {
 
-    override fun visit(symbol: String): PToken.PSingleValueToken {
+    override fun visit(symbol: String): PTokenType.PSingleValueToken {
         TODO()
     }
 }

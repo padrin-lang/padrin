@@ -1,34 +1,34 @@
 package token
 
-enum class PTokens(val tokenType: PToken) {
+enum class PTokens(val tokenType: PTokenType) {
 
-    EOF(PToken.PRegularToken("EOF")),
-    RESERVED(PToken.PRegularToken("RESERVED")),
-    EOL(PToken.PRegularToken("EOL")),
-    INTEGER_LITERAL(PToken.PRegularToken("INTEGER_LITERAL")),
-    FLOAT_LITERAL(PToken.PRegularToken("FLOAT_LITERAL")),
-    CHARACTER_LITERAL(PToken.PRegularToken("CHARACTER_LITERAL")),
-    IDENTIFIER(PToken.PRegularToken("IDENTIFIER")),
+    EOF(PTokenType.PRegularToken("EOF")),
+    RESERVED(PTokenType.PRegularToken("RESERVED")),
+    EOL(PTokenType.PRegularToken("EOL")),
+    INTEGER_LITERAL(PTokenType.PRegularToken("INTEGER_LITERAL")),
+    FLOAT_LITERAL(PTokenType.PRegularToken("FLOAT_LITERAL")),
+    CHARACTER_LITERAL(PTokenType.PRegularToken("CHARACTER_LITERAL")),
+    IDENTIFIER(PTokenType.PRegularToken("IDENTIFIER")),
 
-    PACKAGE(PToken.PKeywordToken("package")),
-    INSTANCE(PToken.PKeywordToken("instance")),
-    TRAIT(PToken.PKeywordToken("trait")),
-    DEF(PToken.PKeywordToken("def")),
-    VAL(PToken.PKeywordToken("val")),
-    VAR(PToken.PKeywordToken("var")),
-    NULL(PToken.PKeywordToken("null")),
+    PACKAGE(PTokenType.PKeywordToken("package")),
+    INSTANCE(PTokenType.PKeywordToken("instance")),
+    TRAIT(PTokenType.PKeywordToken("trait")),
+    DEF(PTokenType.PKeywordToken("def")),
+    VAL(PTokenType.PKeywordToken("val")),
+    VAR(PTokenType.PKeywordToken("var")),
+    NULL(PTokenType.PKeywordToken("null")),
 
-    PRIVATE(PToken.PModifierToken("private")),
-    PUBLIC(PToken.PModifierToken("public")),
-    PROTECTED(PToken.PModifierToken("protected")),
+    PRIVATE(PTokenType.PModifierToken("private")),
+    PUBLIC(PTokenType.PModifierToken("public")),
+    PROTECTED(PTokenType.PModifierToken("protected")),
 
-    LBRACE(PToken.PSingleValueToken("LBRACE", symbol = "{")),
-    RBRACE(PToken.PSingleValueToken("RBRACE", symbol = "}")),
-    LPAR(PToken.PSingleValueToken("LPAR", symbol = "(")),
-    RPAR(PToken.PSingleValueToken("RPAR", symbol = ")")),
-    DOT(PToken.PSingleValueToken("DOT", symbol = ".")),
-    MUL(PToken.PSingleValueToken("MUL", symbol = "*")),
-    PLUS(PToken.PSingleValueToken("PLUS", symbol = "+")),
-    MINUS(PToken.PSingleValueToken("MINUS", symbol = "-")),
-    DIV(PToken.PSingleValueToken("DIV", symbol = "/"))
+    LBRACE(PTokenType.PSingleValueToken("LBRACE", symbol = "{")),
+    RBRACE(PTokenType.PSingleValueToken("RBRACE", symbol = "}")),
+    LPAR(PTokenType.PSingleValueToken("LPAR", symbol = "(")),
+    RPAR(PTokenType.PSingleValueToken("RPAR", symbol = ")")),
+    DOT(PTokenType.PSingleValueToken("DOT", symbol = ".")),
+    MUL(PTokenType.PSingleValueToken("MUL", symbol = "*")),
+    PLUS(PTokenType.PSingleValueToken("PLUS", symbol = "+")),
+    MINUS(PTokenType.PSingleValueToken("MINUS", symbol = "-")),
+    DIV(PTokenType.PSingleValueToken("DIV", symbol = "/"))
 }

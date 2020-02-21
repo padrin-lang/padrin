@@ -1,15 +1,15 @@
 package visitor
 
-import token.PToken
+import token.PTokenType
 
 interface LexerVisitor {
-    fun visit(symbol: String): PToken
+    fun visit(symbol: String): PTokenType
 }
 
 data class BindedLexerVisitor(val visitor: LexerVisitor, val bindedVisitor: BindedLexerVisitor? = null) : LexerVisitor {
-    override fun visit(symbol: String): PToken {
-        return when(val visitorToken: PToken = visitor.visit(symbol)) {
-            is PToken.PUnknownToken -> bindedVisitor?.visit(symbol) ?: PToken.PUnknownToken
+    override fun visit(symbol: String): PTokenType {
+        return when(val visitorToken: PTokenType = visitor.visit(symbol)) {
+            is PTokenType.PUnknownToken -> bindedVisitor?.visit(symbol) ?: PTokenType.PUnknownToken
             else -> visitorToken
         }
     }

@@ -1,10 +1,10 @@
 package visitor
 
-import token.PToken
+import token.PTokenType
 
 object RegularTokenizer : LexerVisitor {
 
-    override fun visit(symbol: String): PToken {
+    override fun visit(symbol: String): PTokenType {
         TODO()
     }
 }
