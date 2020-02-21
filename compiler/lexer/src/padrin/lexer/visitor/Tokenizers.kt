@@ -1,8 +1,9 @@
-package visitor
+package src.padrin.lexer.visitor
 
-val TOKENIZER = (
+val Tokenizer = (
   KeywordTokenizer
   + ModifierTokenizer
   + SingleValueTokenizer
   + RegularTokenizer
+  + NumberTokenizer
 )

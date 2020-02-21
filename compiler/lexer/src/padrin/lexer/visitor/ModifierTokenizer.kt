@@ -1,7 +1,7 @@
-package visitor
+package src.padrin.lexer.visitor
 
-import token.PToken
-import token.PTokenType
+import src.padrin.lexer.token.PToken
+import src.padrin.lexer.token.PTokenType
 
 object ModifierTokenizer : LexerVisitor {
 

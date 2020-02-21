@@ -1,6 +1,4 @@
-package token
-
-import visitor.LexerVisitor
+package src.padrin.lexer.token
 
 interface PElement {
     val text: String

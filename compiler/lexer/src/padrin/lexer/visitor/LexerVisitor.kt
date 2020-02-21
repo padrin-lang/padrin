@@ -1,6 +1,6 @@
-package visitor
+package src.padrin.lexer.visitor
 
-import token.PToken
+import src.padrin.lexer.token.PToken
 
 interface LexerVisitor {
     fun visit(symbol: String): PToken
@@ -8,7 +8,8 @@ interface LexerVisitor {
     fun tokens(): List<PToken> = PToken.values().filter { tokenPredicate(it) }
 }
 
-data class BindedLexerVisitor(val visitor: LexerVisitor, val bindedVisitor: BindedLexerVisitor? = null) : LexerVisitor {
+data class BindedLexerVisitor(val visitor: LexerVisitor, val bindedVisitor: BindedLexerVisitor? = null) :
+    LexerVisitor {
     override fun visit(symbol: String): PToken {
         return when(val visitorToken: PToken = visitor.visit(symbol)) {
             PToken.UNKNOWN -> bindedVisitor?.visit(symbol) ?: PToken.UNKNOWN

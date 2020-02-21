@@ -1,12 +1,12 @@
-package token
+package src.padrin.lexer.token
+
+import java.util.regex.Pattern
 
 enum class PToken(val tokenType: PTokenType) {
 
     EOF(PTokenType.PRegularToken("EOF")),
     RESERVED(PTokenType.PRegularToken("RESERVED")),
     EOL(PTokenType.PRegularToken("EOL")),
-    INTEGER_LITERAL(PTokenType.PRegularToken("INTEGER_LITERAL")),
-    FLOAT_LITERAL(PTokenType.PRegularToken("FLOAT_LITERAL")),
     CHARACTER_LITERAL(PTokenType.PRegularToken("CHARACTER_LITERAL")),
     IDENTIFIER(PTokenType.PRegularToken("IDENTIFIER")),
 
@@ -31,6 +31,9 @@ enum class PToken(val tokenType: PTokenType) {
     PLUS(PTokenType.PSingleValueToken("PLUS", symbol = "+")),
     MINUS(PTokenType.PSingleValueToken("MINUS", symbol = "-")),
     DIV(PTokenType.PSingleValueToken("DIV", symbol = "/")),
+
+    INT(PTokenType.PNumberToken("INT", pattern = Pattern.compile("[-]?[0-9]+"))),
+    DOUBLE(PTokenType.PNumberToken("DOUBLE", pattern = Pattern.compile((INT.tokenType as PTokenType.PNumberToken).pattern.toString() + "((\\.[0-9]+)?([eE][-+]?[0-9]+)?)"))),
 
     UNKNOWN(PTokenType.PUnknownToken)
 }
