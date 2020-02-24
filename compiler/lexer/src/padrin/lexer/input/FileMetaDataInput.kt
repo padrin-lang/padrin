@@ -1,6 +1,6 @@
 package src.padrin.lexer.input
 
-interface MetaDataInput {
+interface FileMetaDataInput {
 
     fun read(): Char
     fun getFile(): String

@@ -7,3 +7,5 @@ inline class Symbol(val text: String)
 
 fun String.symbol(): Symbol = Symbol(this)
 fun Symbol.accept(visitor: LexerVisitor): PToken = visitor.visit(text)
+
+infix operator fun Symbol.plus(char: Char) = Symbol("${this.text}$char")

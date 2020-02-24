@@ -8,7 +8,7 @@ enum class PToken(val tokenType: PTokenType) {
     RESERVED(PTokenType.PRegularToken("RESERVED")),
     EOL(PTokenType.PRegularToken("EOL")),
     CHARACTER_LITERAL(PTokenType.PRegularToken("CHARACTER_LITERAL")),
-    IDENTIFIER(PTokenType.PRegularToken("IDENTIFIER")),
+    IDENTIFIER(PTokenType.PRegularToken("IDENTIFIER", pattern = Pattern.compile("[a-zA-Z_][a-zA-Z0-9_]*"))),
 
     PACKAGE(PTokenType.PKeywordToken("package")),
     INSTANCE(PTokenType.PKeywordToken("instance")),

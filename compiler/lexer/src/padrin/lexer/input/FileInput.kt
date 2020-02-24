@@ -2,7 +2,7 @@ package src.padrin.lexer.input
 
 import java.io.File
 
-class FileInput(private val file: File) : MetaDataInput {
+class FileInput(private val file: File) : FileMetaDataInput {
 
     private var line = -1
     private var column = 0
