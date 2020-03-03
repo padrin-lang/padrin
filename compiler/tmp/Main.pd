@@ -1,1 +1,3 @@
-trait Test {}
+trait Test {
+  def main() {}
+}

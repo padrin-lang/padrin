@@ -4,6 +4,6 @@ val Tokenizer = (
   KeywordTokenizer
   + ModifierTokenizer
   + SingleValueTokenizer
-  + RegularTokenizer
   + NumberTokenizer
+  + RegularTokenizer
 )
